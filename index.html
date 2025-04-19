@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="title">Hues and Cues</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css"/>
+  <meta name="description" content="Hues and Cues - The colorful word game">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta property="og:image" content="images/logo.png">
+</head>
+<body>
+  <!-- Header & Nav -->
+  <header class="top-bar">
+    <div class="logo">
+     <img src="images/logo.png" alt="Hues and Cues Logo" class="logo-img" width="40" height="40">
+      <h1 data-i18n="title">Hues and Cues</h1>
+      <p data-i18n="subtitle" class="subtitle">The colorful word game</p>
+    </div>
+    <div class="controls">
+      <div class="dropdown">
+        <button class="dropbtn"><span data-i18n="settings">Settings</span> ⚙️</button>
+        <div class="dropdown-content">
+          <div class="setting-item">
+            <label data-i18n="theme">Theme</label>
+            <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme">🌙</button>
+          </div>
+          <div class="setting-item">
+            <label data-i18n="language">Language</label>
+            <select id="langSelect" class="lang-select">
+              <option value="en">English</option>
+              <option value="tr">Türkçe</option>
+            </select>
+          </div>
+          <button id="helpBtn" class="full-btn"><span data-i18n="howToPlay">How To Play</span> ❓</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="app">
+    <!-- 1) Setup Screen -->
+    <section id="setup" class="card">
+      <h2 class="section-title" data-i18n="title">Hues and Cues</h2>
+      <p class="instructions" data-i18n="instructions">Guess the color based on the given clue.</p>
+      
+      <div class="form-group">
+        <label for="teamCount" data-i18n="teamCount">Number of Teams</label>
+        <input type="number" id="teamCount" min="1" max="8" value="2"/>
+      </div>
+      <div id="teamNames" class="form-group"></div>
+      <button id="startBtn" class="btn primary" data-i18n="start">Start Game</button>
+    </section>
+
+    <!-- 2) Game Screen -->
+    <section id="game" class="card" hidden>
+      <div id="scoreboard" class="scoreboard"></div>
+
+      <div class="board-container">
+        <div class="clue-container">
+          <span data-i18n="clue">Clue:</span> <span id="clueText" class="clue">---</span>
+        </div>
+        <div id="board" class="board"></div>
+      </div>
+
+      <div class="game-controls">
+        <button id="toggleBtn" class="btn secondary" data-i18n="hideTarget">Hide Target</button>
+        <button id="nextBtn" class="btn secondary" data-i18n="nextRound">Next Round</button>
+        <button id="newGameBtn" class="btn danger" data-i18n="newGame">New Game</button>
+      </div>
+
+      <div id="resultDisplay" class="result-display"></div>
+    </section>
+
+    <!-- 3) How to Play Modal -->
+    <div id="howToPlayModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 data-i18n="howToPlay">How To Play</h2>
+        <p data-i18n="howToPlayText">1. The active player gives a one-word clue related to a specific color.
+2. Other players try to guess which color on the board matches that clue.
+3. Points are awarded based on how close the guess is to the target color.
+4. The closer your guess, the more points you earn!</p>
+        <div class="color-examples">
+          <h3>Clue Examples:</h3>
+          <ul>
+            <li><span class="example-color" style="background-color: #FF5733;">strawberry</span></li>
+            <li><span class="example-color" style="background-color: #FFC300;">banana</span></li>
+            <li><span class="example-color" style="background-color: #DAF7A6;">lime</span></li>
+            <li><span class="example-color" style="background-color: #9C27B0;">lavender</span></li>
+            <li><span class="example-color" style="background-color: #3498DB;">ocean</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      <a href="https://github.com/furkankoykiran/hues-and-cues" target="_blank">GitHub</a>
+      <span>|</span>
+      <span>© 2025 <a href="https://furkankoykiran.com.tr" target="_blank">Furkan Köykıran</a></span>
+    </div>
+  </footer>
+
+  <script src="js/clues.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html> 

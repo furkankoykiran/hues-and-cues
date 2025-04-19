@@ -1,0 +1,21 @@
+{
+  "title": "Hues and Cues",
+  "subtitle": "Renkli kelime oyunu",
+  "teamCount": "Takım Sayısı",
+  "teamName": "Takım",
+  "oneTeam": "Bireysel",
+  "start": "Oyunu Başlat",
+  "hideTarget": "Hedefi Gizle",
+  "revealTarget": "Hedefi Göster",
+  "nextRound": "Sonraki Tur",
+  "newGame": "Yeni Oyun",
+  "score": "Skor",
+  "points": "Puan",
+  "settings": "Ayarlar",
+  "language": "Dil",
+  "theme": "Tema",
+  "instructions": "Verilen ipucuna göre rengi tahmin edin.",
+  "howToPlay": "Nasıl Oynanır",
+  "howToPlayText": "1. Aktif oyuncu bir hedef renk görür ve bu renkle ilgili tek kelimelik bir ipucu verir.\n2. Oyuncu ipucu olarak renk isimleri veya sayılar kullanamaz.\n3. Oyuncu hedef rengi gösterir/gizler ve diğer oyuncular hangi rengin ipucuyla eşleştiğini tahmin etmeye çalışır.\n4. Tahminin hedef renge yakınlığına göre puanlar verilir:\n   - 5 puan: Tam isabet\n   - 4 puan: Çok yakın\n   - 3 puan: Yakın\n   - 2 puan: Uzak değil\n   - 1 puan: Uzak\n   - 0 puan: Çok uzak\n5. Oyun sonunda en çok puana sahip oyuncu kazanır!",
+  "clue": "İpucu"
+} 

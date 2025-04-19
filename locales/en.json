@@ -1,0 +1,21 @@
+{
+  "title": "Hues and Cues",
+  "subtitle": "The colorful word game",
+  "teamCount": "Number of Teams",
+  "teamName": "Team",
+  "oneTeam": "Individual",
+  "start": "Start Game",
+  "hideTarget": "Hide Target",
+  "revealTarget": "Reveal Target",
+  "nextRound": "Next Round",
+  "newGame": "New Game",
+  "score": "Score",
+  "points": "Points",
+  "settings": "Settings",
+  "language": "Language",
+  "theme": "Theme",
+  "instructions": "Guess the color based on the given clue.",
+  "howToPlay": "How to Play",
+  "howToPlayText": "1. The active player sees a target color and gives a one-word clue related to that color.\n2. The player must not use color names or numbers as clues.\n3. The player shows/hides the target color and other players try to guess which color matches the clue.\n4. Points are awarded based on how close the guess is to the target color:\n   - 5 points: Direct hit\n   - 4 points: Very close\n   - 3 points: Close\n   - 2 points: Not far\n   - 1 point: Far\n   - 0 points: Very far\n5. The player with the most points at the end wins!",
+  "clue": "Clue"
+} 
