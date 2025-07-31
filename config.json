@@ -1,0 +1,38 @@
+{
+    "trading_config": {
+        "default_mode": "backtest",
+        "initial_cash": 100000.0,
+        "symbols": ["AAPL", "GOOGL", "MSFT", "AMZN", "TSLA"],
+        "backtest": {
+            "start_date": "2023-01-01",
+            "end_date": "2023-12-31",
+            "data_frequency": "daily"
+        },
+        "live": {
+            "update_interval_seconds": 10,
+            "max_runtime_seconds": 3600,
+            "risk_management": {
+                "max_position_size": 0.1,
+                "stop_loss_percentage": -0.05,
+                "take_profit_percentage": 0.15
+            }
+        }
+    },
+    "strategy_config": {
+        "moving_average": {
+            "short_window": 20,
+            "long_window": 50,
+            "signal_threshold": 0.02
+        },
+        "rsi": {
+            "period": 14,
+            "oversold_threshold": 30,
+            "overbought_threshold": 70
+        }
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "trading_system.log",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    }
+}
