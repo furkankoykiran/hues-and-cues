@@ -1,0 +1,25 @@
+{
+  "name": "Hues and Cues — The Colourful Word Game",
+  "short_name": "Hues and Cues",
+  "description": "A free browser party game: one player gives a one-word clue and everyone else guesses the matching colour on the board.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#f472b6",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "images/logo-160.png",
+      "sizes": "160x160",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
