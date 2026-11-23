@@ -1,0 +1,36 @@
+# Hues and Cues — The Colourful Word Game
+
+> Hues and Cues is a free browser party game: one player gives a one-word clue for a target colour and the other players guess which colour on the board matches it.
+
+Canonical: https://furkankoykiran.com.tr/hues-and-cues/
+Source: https://github.com/furkankoykiran/hues-and-cues
+Languages: English (en), Turkish (tr)
+License: MIT
+
+## What it is
+
+Hues and Cues is a digital adaptation of the colour-guessing board game. The board is a grid of
+colours. The active player sees a target colour and says a single word that describes it — without
+naming a colour or a number. Everyone else picks the square they think matches the clue, and the
+closer the pick, the more points the round is worth.
+
+## How to play
+
+1. Open https://furkankoykiran.com.tr/hues-and-cues/.
+2. Choose the number of teams (1–8) and start the game.
+3. The active player reads the hidden target colour and gives a one-word clue.
+4. The other players pick a colour on the board; the round scores by distance to the target.
+5. Repeat until the scoreboard picks a winner.
+
+## Features
+
+- One-word clue rounds with automatic distance-based scoring
+- 1 to 8 teams, including a solo mode
+- Light and dark themes
+- English and Turkish interface with automatic language detection
+- No account, no tracking, and it keeps working offline once loaded
+
+## Citation
+
+Cite as: "Hues and Cues — The Colourful Word Game", Furkan Köykıran,
+https://furkankoykiran.com.tr/hues-and-cues/

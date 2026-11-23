@@ -3,21 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-i18n="title">Hues and Cues</title>
+  <title>Hues and Cues — The Colourful Word Game</title>
+  <meta name="description" content="Play Hues and Cues in your browser: one player gives a one-word clue, everyone else guesses the matching colour on the board. A free party game for 1–8 teams in English and Turkish." />
+  <meta name="author" content="Furkan Köykıran" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#f472b6" />
+  <link rel="canonical" href="https://furkankoykiran.com.tr/hues-and-cues/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@700&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="css/style.css"/>
-  <meta name="description" content="Hues and Cues - The colorful word game">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <meta property="og:image" content="images/logo.png">
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="images/logo-160.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hues and Cues" />
+  <meta property="og:url" content="https://furkankoykiran.com.tr/hues-and-cues/" />
+  <meta property="og:title" content="Hues and Cues — The Colourful Word Game" />
+  <meta property="og:description" content="One word, one colour. Guess the hue from a one-word clue in this free browser party game for 1–8 teams." />
+  <meta property="og:image" content="https://furkankoykiran.com.tr/hues-and-cues/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Hues and Cues colour-guessing party game" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hues and Cues — The Colourful Word Game" />
+  <meta name="twitter:description" content="One word, one colour. Guess the hue from a one-word clue in this free browser party game for 1–8 teams." />
+  <meta name="twitter:image" content="https://furkankoykiran.com.tr/hues-and-cues/og-image.png" />
+
+  <link rel="alternate" hreflang="en" href="https://furkankoykiran.com.tr/hues-and-cues/" />
+  <link rel="alternate" hreflang="tr" href="https://furkankoykiran.com.tr/hues-and-cues/" />
+  <link rel="alternate" hreflang="x-default" href="https://furkankoykiran.com.tr/hues-and-cues/" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://furkankoykiran.com.tr/hues-and-cues/#app",
+          "name": "Hues and Cues",
+          "url": "https://furkankoykiran.com.tr/hues-and-cues/",
+          "description": "A free browser party game: one player gives a one-word clue for a target colour and the other players guess which colour on the board matches it.",
+          "applicationCategory": "GameApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "isAccessibleForFree": true,
+          "inLanguage": ["en", "tr"],
+          "codeRepository": "https://github.com/furkankoykiran/hues-and-cues",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@type": "Person",
+            "name": "Furkan Köykıran",
+            "url": "https://furkankoykiran.com.tr/"
+          },
+          "featureList": [
+            "One-word colour clues",
+            "1 to 8 teams with automatic scoring",
+            "Light and dark themes",
+            "English and Turkish interface",
+            "Works offline once loaded"
+          ]
+        },
+        {
+          "@type": "Game",
+          "@id": "https://furkankoykiran.com.tr/hues-and-cues/#game",
+          "name": "Hues and Cues",
+          "url": "https://furkankoykiran.com.tr/hues-and-cues/",
+          "gameLocation": "https://furkankoykiran.com.tr/hues-and-cues/",
+          "numberOfPlayers": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 8
+          },
+          "genre": ["Party game", "Word game", "Guessing game"],
+          "inLanguage": ["en", "tr"]
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
   <!-- Header & Nav -->
   <header class="top-bar">
     <div class="logo">
-     <img src="images/logo.png" alt="Hues and Cues Logo" class="logo-img" width="40" height="40">
+     <img src="images/logo-160.png" alt="Hues and Cues logo" class="logo-img" width="40" height="40">
       <h1 data-i18n="title">Hues and Cues</h1>
       <p data-i18n="subtitle" class="subtitle">The colorful word game</p>
     </div>
@@ -73,14 +152,14 @@
         <button id="newGameBtn" class="btn danger" data-i18n="newGame">New Game</button>
       </div>
 
-      <div id="resultDisplay" class="result-display"></div>
+      <div id="resultDisplay" class="result-display" aria-live="polite"></div>
     </section>
 
     <!-- 3) How to Play Modal -->
-    <div id="howToPlayModal" class="modal">
+    <div id="howToPlayModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="howToPlayTitle">
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 data-i18n="howToPlay">How To Play</h2>
+        <span class="close" role="button" tabindex="0" aria-label="Close how-to-play dialog">&times;</span>
+        <h2 id="howToPlayTitle" data-i18n="howToPlay">How To Play</h2>
         <p data-i18n="howToPlayText">1. The active player gives a one-word clue related to a specific color.
 2. Other players try to guess which color on the board matches that clue.
 3. Points are awarded based on how close the guess is to the target color.
@@ -101,11 +180,19 @@
 
   <footer>
     <div>
-      <a href="https://github.com/furkankoykiran/hues-and-cues" target="_blank">GitHub</a>
+      <a href="https://github.com/furkankoykiran/hues-and-cues" target="_blank" rel="noopener">GitHub</a>
       <span>|</span>
-      <span>© 2025 <a href="https://furkankoykiran.com.tr" target="_blank">Furkan Köykıran</a></span>
+      <span>© 2026 <a href="https://furkankoykiran.com.tr" target="_blank" rel="noopener">Furkan Köykıran</a></span>
     </div>
   </footer>
+
+  <noscript>
+    <p style="max-width:42rem;margin:2rem auto;padding:0 1.5rem;line-height:1.6">
+      Hues and Cues needs JavaScript to run the colour board, scoring and language switch.
+      The source code is on
+      <a href="https://github.com/furkankoykiran/hues-and-cues">GitHub</a>.
+    </p>
+  </noscript>
 
   <script src="js/clues.js"></script>
   <script src="js/script.js"></script>

@@ -1,0 +1,24 @@
+# ai.txt - how AI systems may use Hues and Cues
+# Standards: https://contentsignals.org/ and https://llmstxt.org/
+#
+# Owner: Furkan Köykıran
+# Contact: furkankoykiran@gmail.com
+# Canonical: https://furkankoykiran.com.tr/hues-and-cues/
+#
+# Summary for language models:
+#   https://furkankoykiran.com.tr/hues-and-cues/llms.txt
+# Source code:
+#   https://github.com/furkankoykiran/hues-and-cues
+# Crawling policy:
+#   https://furkankoykiran.com.tr/hues-and-cues/robots.txt
+#
+# Content signals: search=yes, ai-input=yes, ai-train=yes
+# Search indexing, retrieval, citation and training are all permitted;
+# attribution is appreciated.
+#
+# Preferred citation:
+#   "Hues and Cues — The Colourful Word Game", Furkan Köykıran,
+#   https://furkankoykiran.com.tr/hues-and-cues/
+#
+# Licensing: the game code is MIT. The colour names and clue lists are part of
+# the repository and covered by the same licence.
