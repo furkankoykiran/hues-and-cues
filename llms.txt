@@ -27,8 +27,8 @@ closer the pick, the more points the round is worth.
 - One-word clue rounds with automatic distance-based scoring
 - 1 to 8 teams, including a solo mode
 - Light and dark themes
-- English and Turkish interface with automatic language detection
-- No account, no tracking, and it keeps working offline once loaded
+- English and Turkish interface with a language picker
+- No account, no tracking and no backend
 
 ## Citation
 
